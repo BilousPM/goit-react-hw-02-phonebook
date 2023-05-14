@@ -8,10 +8,7 @@ import css from "./App.module.css"
 class App extends Component {
 
   state = {
-    contacts: [{id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
-    {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
-    {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
-    {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},],
+    contacts: [],
     filter: '',
   };
 
@@ -60,7 +57,7 @@ class App extends Component {
         <h1 className={css.phonebook_title}>Phonebook</h1>
         <Form onSubmit={this.handleFormSubmit} />
 
-        <h2>Contacts</h2>
+        <h2 className={css.phonebook_title}>Contacts</h2>
         < Filter value={filter} onChange={this.changeFilter} />
         < ContactList contacts={selectedContacts} onDeleteContact={this.deleteContact } />
       </div>
